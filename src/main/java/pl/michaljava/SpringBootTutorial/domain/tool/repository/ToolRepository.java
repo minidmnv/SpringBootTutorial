@@ -1,16 +1,11 @@
 package pl.michaljava.SpringBootTutorial.domain.tool.repository;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.repository.Repository;
+import org.springframework.data.repository.PagingAndSortingRepository;
 
 import pl.michaljava.SpringBootTutorial.domain.tool.Tool;
 
 /**
  * @author mnicinski
  */
-public interface ToolRepository extends Repository<Tool, Long> {
-
-	Page<Tool> findAll(Pageable pageable);
-
+public interface ToolRepository extends PagingAndSortingRepository<Tool, Long> {
 }
